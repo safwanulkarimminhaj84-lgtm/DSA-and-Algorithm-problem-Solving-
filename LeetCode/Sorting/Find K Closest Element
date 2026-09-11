@@ -1,0 +1,33 @@
+/**
+ * @param {number[
+ */
+function findClosestElements (arr, k, x) {
+      let left = 0;
+      let right = arr.length-1;
+      while(right-left+1>k){
+        let leftDiff = Math.abs(arr[left]-x);
+        let rightDiff = Math.abs(arr[right]-x);
+
+        if(leftDiff>rightDiff){
+            left++;
+        }
+        else{
+            right--;
+        }
+
+      }
+      return arr.slice(left,right+1)
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
