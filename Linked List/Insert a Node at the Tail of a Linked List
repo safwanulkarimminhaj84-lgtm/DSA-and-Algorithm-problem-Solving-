@@ -1,0 +1,36 @@
+SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
+
+    SinglyLinkedListNode* newNode = new SinglyLinkedListNode(data);
+
+    if (head == nullptr) {
+        return newNode;
+    }
+
+    SinglyLinkedListNode* last = head;
+
+    while (last->next != nullptr) {
+        last = last->next;
+    }
+
+    last->next = newNode;
+
+    return head;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
