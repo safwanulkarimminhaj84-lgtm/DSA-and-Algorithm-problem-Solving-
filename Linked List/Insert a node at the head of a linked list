@@ -1,9 +1,34 @@
 SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode* llist, int data) {
+	      
+          SinglyLinkedListNode*newNode = new SinglyLinkedListNode(data);
+          
+          newNode->next = llist;
+          
+          return newNode;
 
-        SinglyLinkedListNode*newNode = new SinglyLinkedListNode(data);
-        newNode->next=llist;
-        return newNode;
 }
+
+void printListNode(SinglyLinkedListNode*newNode){
+    SinglyLinkedListNode*curr = newNode;
+    while(curr!=nullptr){
+        cout<<" "<<curr->data;
+        curr->next=newNode;
+    }
+    cout<<endl;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
